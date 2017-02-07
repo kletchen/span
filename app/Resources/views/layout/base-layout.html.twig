@@ -100,9 +100,12 @@ desired effect
             {% block avanzu_sidebar %}
                 {% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}
                     {{ render(controller('AppBundle:Sidebar:userPanel')) }}
-                    {{ render(controller('AvanzuAdminThemeBundle:Sidebar:searchForm')) }}
+                    {#{{ render(controller('AppBundle:Sidebar:searchForm')) }}#}
+                    <br>
                 {% endif %}
-                {{ render(controller('AvanzuAdminThemeBundle:Sidebar:menu', {'request':app.request})) }}
+                {#{{ render(controller('AppBundle:Sidebar:menu', {'request':app.request})) }}#}
+                <span><a href="{{ path("admin_dashboard") }}">&nbsp;&nbsp;&nbsp;&nbsp;User Management</a></span><br><br>
+                <span><a href="{{ path("admin_dashboard") }}">&nbsp;&nbsp;&nbsp;&nbsp;Test Management</a></span>
             {% endblock %}
         </section>
         <!-- /.sidebar -->

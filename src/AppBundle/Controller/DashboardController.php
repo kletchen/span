@@ -18,7 +18,7 @@ class DashboardController extends Controller
     }
 
     /**
-     * @Route("/dashboard", name="admin_dashboard")
+     * @Route("/admin/dashboard", name="admin_dashboard")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function dashboardAction()
